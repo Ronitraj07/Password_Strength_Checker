@@ -3,13 +3,18 @@ from pydantic import BaseModel
 
 app = FastAPI()
 
-# Enable CORS (if not already added)
+# Enable CORS
 from fastapi.middleware.cors import CORSMiddleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://password-strength-checker-pi-tan.vercel.app/"],  # Allow frontend to access backend
+    allow_origins=[
+        "http://localhost:8080",
+        "http://localhost:3000",
+        "https://password-strength-checker-pi-tan.vercel.app",  # Your Vercel frontend
+        "https://*.vercel.app"  # Allow all Vercel preview deployments
+    ],
     allow_credentials=True,
-    allow_methods=["*"],  # Allow all HTTP methods (GET, POST, etc.)
+    allow_methods=["*"],
     allow_headers=["*"],
 )
 
