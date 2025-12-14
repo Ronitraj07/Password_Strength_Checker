@@ -33,8 +33,8 @@ Brainwave_Matrix_Intern_Task2/
 
 ### 🔹 Step 1: Clone the Repository  
 ```sh
-git clone https://github.com/Ronitraj07/Brainwave_Matrix_Intern_Task2.git
-cd Brainwave_Matrix_Intern_Task2
+git clone https://github.com/Ronitraj07/Password_Strength_Checker.git
+cd Password_Strength_Checker
 ```
 
 ### 🔹 Step 2: Set Up the Backend  
