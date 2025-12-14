@@ -1,4 +1,13 @@
-async function checkPassword() {
+// Import and initialize Vercel Web Analytics
+import { inject } from '@vercel/analytics';
+
+// Initialize analytics on page load
+if (typeof window !== 'undefined') {
+    inject();
+}
+
+// Expose checkPassword to global scope for HTML onclick handlers
+window.checkPassword = async function checkPassword() {
     const password = document.getElementById("password").value;
 
     try {
