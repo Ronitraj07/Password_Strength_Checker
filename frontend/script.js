@@ -2,12 +2,12 @@ async function checkPassword() {
     const password = document.getElementById("password").value;
 
     try {
-        const response = await fetch("https://password-strength-checker-6o1x.onrender.com/", { 
+        const response = await fetch("https://password-strength-checker-6o1x.onrender.com/check-password/", { 
             method: "POST",  
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify({ password: password }),  // Send JSON data
+            body: JSON.stringify({ password: password }),
         });
 
         if (!response.ok) {
@@ -15,7 +15,7 @@ async function checkPassword() {
         }
 
         const data = await response.json();
-        console.log("Response:", data); // Debugging: See what the backend returns
+        console.log("Response:", data);
         document.getElementById("result").innerText = `Strength: ${data.strength}`;
     } catch (error) {
         console.error("Error:", error);
