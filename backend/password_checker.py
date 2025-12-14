@@ -7,7 +7,7 @@ app = FastAPI()
 from fastapi.middleware.cors import CORSMiddleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:8080"],  # Allow frontend to access backend
+    allow_origins=["https://password-strength-checker-pi-tan.vercel.app/"],  # Allow frontend to access backend
     allow_credentials=True,
     allow_methods=["*"],  # Allow all HTTP methods (GET, POST, etc.)
     allow_headers=["*"],
