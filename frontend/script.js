@@ -2,7 +2,7 @@ async function checkPassword() {
     const password = document.getElementById("password").value;
 
     try {
-        const response = await fetch("http://127.0.0.1:5000/check-password/", { 
+        const response = await fetch("https://password-strength-checker-6o1x.onrender.com/", { 
             method: "POST",  
             headers: {
                 "Content-Type": "application/json",
